@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_FsGP0CO9EeCZn-T-AIrSPQ" name="use_case">
+  <packageImport xmi:id="_FsGP0SO9EeCZn-T-AIrSPQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_Mx-GUCO9EeCZn-T-AIrSPQ" name="Advisor"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_PWyMcCO9EeCZn-T-AIrSPQ" name="Driver"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_XtbuUCO9EeCZn-T-AIrSPQ" name="Mark Trip Beginning">
+    <include xmi:id="_VYNEQC3tEeCrM9IFaPNX9A" name="Include_Specify Driver" addition="_IaNj0C3tEeCrM9IFaPNX9A"/>
+    <include xmi:id="_Vzq4QC3tEeCrM9IFaPNX9A" name="Include_Specify Vehicle" addition="_OrhJ0C3tEeCrM9IFaPNX9A"/>
+    <include xmi:id="_CMyJgC3zEeCrM9IFaPNX9A" name="Include_Store Trip Data" addition="_k2tc0C3xEeCrM9IFaPNX9A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_dl7ywCO9EeCZn-T-AIrSPQ" name="A_Driver_Mark Trip Beginning" memberEnd="_dmAEMCO9EeCZn-T-AIrSPQ _dmInECO9EeCZn-T-AIrSPQ">
+    <ownedEnd xmi:id="_dmAEMCO9EeCZn-T-AIrSPQ" name="mark trip beginning" type="_XtbuUCO9EeCZn-T-AIrSPQ" isUnique="false" association="_dl7ywCO9EeCZn-T-AIrSPQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dmIAASO9EeCZn-T-AIrSPQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dmIAACO9EeCZn-T-AIrSPQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_dmInECO9EeCZn-T-AIrSPQ" name="driver" type="_PWyMcCO9EeCZn-T-AIrSPQ" isUnique="false" association="_dl7ywCO9EeCZn-T-AIrSPQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dmLqYCO9EeCZn-T-AIrSPQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dmLqYSO9EeCZn-T-AIrSPQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_eUZbQCO9EeCZn-T-AIrSPQ" name="A_Advisor_Mark Trip Beginning" memberEnd="_eUe60CO9EeCZn-T-AIrSPQ _eUilMCO9EeCZn-T-AIrSPQ">
+    <ownedEnd xmi:id="_eUe60CO9EeCZn-T-AIrSPQ" name="mark trip beginning" type="_XtbuUCO9EeCZn-T-AIrSPQ" isUnique="false" association="_eUZbQCO9EeCZn-T-AIrSPQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eUh-ISO9EeCZn-T-AIrSPQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eUh-ICO9EeCZn-T-AIrSPQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_eUilMCO9EeCZn-T-AIrSPQ" name="advisor" type="_Mx-GUCO9EeCZn-T-AIrSPQ" isUnique="false" association="_eUZbQCO9EeCZn-T-AIrSPQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eUlogCO9EeCZn-T-AIrSPQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eUmPkCO9EeCZn-T-AIrSPQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ei-CwCO9EeCZn-T-AIrSPQ" name="A_0"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_hTC9sCO9EeCZn-T-AIrSPQ" name="Provide Feedback">
+    <include xmi:id="_AjoEsCO-EeCZn-T-AIrSPQ" name="Include_Calculate Dynamics" addition="_6NELQCO9EeCZn-T-AIrSPQ"/>
+    <extensionPoint xmi:id="_doIVsCO-EeCZn-T-AIrSPQ" name="ExtensionPoint_0"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_pSHtECO9EeCZn-T-AIrSPQ" name="A_Advisor_Provide Feedback" memberEnd="_pSOawCO9EeCZn-T-AIrSPQ _pSSFICO9EeCZn-T-AIrSPQ">
+    <ownedEnd xmi:id="_pSOawCO9EeCZn-T-AIrSPQ" name="provide feedback" type="_hTC9sCO9EeCZn-T-AIrSPQ" isUnique="false" association="_pSHtECO9EeCZn-T-AIrSPQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pSReECO9EeCZn-T-AIrSPQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pSQ3ACO9EeCZn-T-AIrSPQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_pSSFICO9EeCZn-T-AIrSPQ" name="advisor" type="_Mx-GUCO9EeCZn-T-AIrSPQ" isUnique="false" association="_pSHtECO9EeCZn-T-AIrSPQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pSVIcCO9EeCZn-T-AIrSPQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pSVIcSO9EeCZn-T-AIrSPQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_6NELQCO9EeCZn-T-AIrSPQ" name="Calculate Dynamics">
+    <include xmi:id="_BEbPMCO_EeCZn-T-AIrSPQ" name="Include_Sample sensors" addition="_4axRwCO-EeCZn-T-AIrSPQ"/>
+    <include xmi:id="_CjoYICO_EeCZn-T-AIrSPQ" name="Include_Calculate VSP" addition="_2Ly4wCO-EeCZn-T-AIrSPQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_GDV1sCO-EeCZn-T-AIrSPQ" name="Real-time feedback">
+    <extend xmi:id="_qnyDACO-EeCZn-T-AIrSPQ" name="Extend_Provide Feedback" extendedCase="_W8Sv0CO-EeCZn-T-AIrSPQ" extensionLocation="_YH0HwCO-EeCZn-T-AIrSPQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_W8Sv0CO-EeCZn-T-AIrSPQ" name="Provide Feedback">
+    <include xmi:id="_z_lf4CO-EeCZn-T-AIrSPQ" name="Include_Calculate Dynamics" addition="_6NELQCO9EeCZn-T-AIrSPQ"/>
+    <extensionPoint xmi:id="_YH0HwCO-EeCZn-T-AIrSPQ" name="Feedback type"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_rbzg8CO-EeCZn-T-AIrSPQ" name="Historical Feedback">
+    <extend xmi:id="_vovbcCO-EeCZn-T-AIrSPQ" name="Extend_Provide Feedback" extendedCase="_W8Sv0CO-EeCZn-T-AIrSPQ" extensionLocation="_YH0HwCO-EeCZn-T-AIrSPQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_2Ly4wCO-EeCZn-T-AIrSPQ" name="Calculate VSP"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_4axRwCO-EeCZn-T-AIrSPQ" name="Sample sensors"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UYuKYCO_EeCZn-T-AIrSPQ" name="A_Advisor_Provide Feedback" memberEnd="_UY2tQCO_EeCZn-T-AIrSPQ _UY6XoCO_EeCZn-T-AIrSPQ">
+    <ownedEnd xmi:id="_UY2tQCO_EeCZn-T-AIrSPQ" name="provide feedback" type="_W8Sv0CO-EeCZn-T-AIrSPQ" isUnique="false" association="_UYuKYCO_EeCZn-T-AIrSPQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UY5wkSO_EeCZn-T-AIrSPQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UY5wkCO_EeCZn-T-AIrSPQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_UY6XoCO_EeCZn-T-AIrSPQ" name="advisor" type="_Mx-GUCO9EeCZn-T-AIrSPQ" isUnique="false" association="_UYuKYCO_EeCZn-T-AIrSPQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UY-CACO_EeCZn-T-AIrSPQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UY-CASO_EeCZn-T-AIrSPQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Y0-TQCO_EeCZn-T-AIrSPQ" name="Calibrate Device"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_dashMCO_EeCZn-T-AIrSPQ" name="Calibrate Sensors">
+    <generalization xmi:id="_jeLtoCO_EeCZn-T-AIrSPQ" general="_Y0-TQCO_EeCZn-T-AIrSPQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_gRyqICO_EeCZn-T-AIrSPQ" name="Calibrate Orientation">
+    <generalization xmi:id="_j7Z1ICO_EeCZn-T-AIrSPQ" general="_Y0-TQCO_EeCZn-T-AIrSPQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_lrn1kCO_EeCZn-T-AIrSPQ" name="A_Driver_Calibrate Device" memberEnd="_lr0C0CO_EeCZn-T-AIrSPQ _lr4UQCO_EeCZn-T-AIrSPQ">
+    <ownedEnd xmi:id="_lr0C0CO_EeCZn-T-AIrSPQ" name="calibrate device" type="_Y0-TQCO_EeCZn-T-AIrSPQ" isUnique="false" association="_lrn1kCO_EeCZn-T-AIrSPQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lr3tMSO_EeCZn-T-AIrSPQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lr3tMCO_EeCZn-T-AIrSPQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_lr4UQCO_EeCZn-T-AIrSPQ" name="driver" type="_PWyMcCO9EeCZn-T-AIrSPQ" isUnique="false" association="_lrn1kCO_EeCZn-T-AIrSPQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lr7-oCO_EeCZn-T-AIrSPQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lr8lsCO_EeCZn-T-AIrSPQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_IaNj0C3tEeCrM9IFaPNX9A" name="Specify Driver"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_OrhJ0C3tEeCrM9IFaPNX9A" name="Specify Vehicle"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_KnsAoC3wEeCrM9IFaPNX9A" name="Database"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_MfeBoC3wEeCrM9IFaPNX9A" name="Register Driver"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_PYPlkC3wEeCrM9IFaPNX9A" name="Register Vehicle"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7ucfAC3wEeCrM9IFaPNX9A" name="A_Register Driver_Database" memberEnd="_7uoFMC3wEeCrM9IFaPNX9A _7utkwC3wEeCrM9IFaPNX9A">
+    <ownedEnd xmi:id="_7uoFMC3wEeCrM9IFaPNX9A" name="database" type="_KnsAoC3wEeCrM9IFaPNX9A" isUnique="false" association="_7ucfAC3wEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7us9sC3wEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7usWoC3wEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_7utkwC3wEeCrM9IFaPNX9A" name="register driver" type="_MfeBoC3wEeCrM9IFaPNX9A" isUnique="false" association="_7ucfAC3wEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ux2MC3wEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7uydQC3wEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_E6L10C3xEeCrM9IFaPNX9A" name="A_Register Vehicle_Database" memberEnd="_E6afUC3xEeCrM9IFaPNX9A _E6fX0C3xEeCrM9IFaPNX9A">
+    <ownedEnd xmi:id="_E6afUC3xEeCrM9IFaPNX9A" name="database" type="_KnsAoC3wEeCrM9IFaPNX9A" isUnique="false" association="_E6L10C3xEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E6ewwC3xEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_E6eJsC3xEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_E6fX0C3xEeCrM9IFaPNX9A" name="register vehicle" type="_PYPlkC3wEeCrM9IFaPNX9A" isUnique="false" association="_E6L10C3xEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E6kQUC3xEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_E6kQUS3xEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_K1bsQC3xEeCrM9IFaPNX9A" name="A_Advisor_Register Driver" memberEnd="_K1ogkC3xEeCrM9IFaPNX9A _K1uAIC3xEeCrM9IFaPNX9A">
+    <ownedEnd xmi:id="_K1ogkC3xEeCrM9IFaPNX9A" name="register driver" type="_MfeBoC3wEeCrM9IFaPNX9A" isUnique="false" association="_K1bsQC3xEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_K1tZEC3xEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_K1syAC3xEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_K1uAIC3xEeCrM9IFaPNX9A" name="advisor" type="_Mx-GUCO9EeCZn-T-AIrSPQ" isUnique="false" association="_K1bsQC3xEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_K1yRkC3xEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_K1y4oC3xEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_V2NSEC3xEeCrM9IFaPNX9A" name="A_Advisor_Register Vehicle" memberEnd="_V2bUgC3xEeCrM9IFaPNX9A _V2gNAC3xEeCrM9IFaPNX9A">
+    <ownedEnd xmi:id="_V2bUgC3xEeCrM9IFaPNX9A" name="register vehicle" type="_PYPlkC3wEeCrM9IFaPNX9A" isUnique="false" association="_V2NSEC3xEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_V2fl8S3xEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_V2fl8C3xEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_V2gNAC3xEeCrM9IFaPNX9A" name="advisor" type="_Mx-GUCO9EeCZn-T-AIrSPQ" isUnique="false" association="_V2NSEC3xEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_V2lFgC3xEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_V2lskC3xEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_brH3AC3xEeCrM9IFaPNX9A" name="A_Driver_Register Driver" memberEnd="_brYVsC3xEeCrM9IFaPNX9A _brd1QC3xEeCrM9IFaPNX9A">
+    <ownedEnd xmi:id="_brYVsC3xEeCrM9IFaPNX9A" name="register driver" type="_MfeBoC3wEeCrM9IFaPNX9A" isUnique="false" association="_brH3AC3xEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_brdOMC3xEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_brcnIC3xEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_brd1QC3xEeCrM9IFaPNX9A" name="driver" type="_PWyMcCO9EeCZn-T-AIrSPQ" isUnique="false" association="_brH3AC3xEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_britwC3xEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_britwS3xEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cb3-gC3xEeCrM9IFaPNX9A" name="A_Driver_Register Vehicle" memberEnd="_ccGoAC3xEeCrM9IFaPNX9A _ccPK4C3xEeCrM9IFaPNX9A">
+    <ownedEnd xmi:id="_ccGoAC3xEeCrM9IFaPNX9A" name="register vehicle" type="_PYPlkC3wEeCrM9IFaPNX9A" isUnique="false" association="_cb3-gC3xEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ccOj0S3xEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ccOj0C3xEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_ccPK4C3xEeCrM9IFaPNX9A" name="driver" type="_PWyMcCO9EeCZn-T-AIrSPQ" isUnique="false" association="_cb3-gC3xEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ccUqcC3xEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ccUqcS3xEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_k2tc0C3xEeCrM9IFaPNX9A" name="Store Trip Data">
+    <include xmi:id="_y12RMC3xEeCrM9IFaPNX9A" name="Include_Specify Driver" addition="_IaNj0C3tEeCrM9IFaPNX9A"/>
+    <include xmi:id="_0aKjoC3xEeCrM9IFaPNX9A" name="Include_Specify Vehicle" addition="_OrhJ0C3tEeCrM9IFaPNX9A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_HUr3cC3zEeCrM9IFaPNX9A" name="A_Database_Store Trip Data" memberEnd="_HU-LUC3zEeCrM9IFaPNX9A _HVDD0S3zEeCrM9IFaPNX9A">
+    <ownedEnd xmi:id="_HU-LUC3zEeCrM9IFaPNX9A" name="store trip data" type="_k2tc0C3xEeCrM9IFaPNX9A" isUnique="false" association="_HUr3cC3zEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HVDD0C3zEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HVCcwC3zEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_HVDD0S3zEeCrM9IFaPNX9A" name="database" type="_KnsAoC3wEeCrM9IFaPNX9A" isUnique="false" association="_HUr3cC3zEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HVIjYC3zEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HVJKcC3zEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_XRAxQC3zEeCrM9IFaPNX9A" name="A_Driver_Provide Feedback" memberEnd="_XRR3AC3zEeCrM9IFaPNX9A _XRXWkC3zEeCrM9IFaPNX9A">
+    <ownedEnd xmi:id="_XRR3AC3zEeCrM9IFaPNX9A" name="provide feedback" type="_W8Sv0CO-EeCZn-T-AIrSPQ" isUnique="false" association="_XRAxQC3zEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XRWvgC3zEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XRWIcC3zEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_XRXWkC3zEeCrM9IFaPNX9A" name="driver" type="_PWyMcCO9EeCZn-T-AIrSPQ" isUnique="false" association="_XRAxQC3zEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XRc2IC3zEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XRddMC3zEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_fP23IC3zEeCrM9IFaPNX9A" name="A_Database_Store Trip Data" memberEnd="_fQODgC3zEeCrM9IFaPNX9A _fQTjES3zEeCrM9IFaPNX9A">
+    <ownedEnd xmi:id="_fQODgC3zEeCrM9IFaPNX9A" name="store trip data" type="_k2tc0C3xEeCrM9IFaPNX9A" isUnique="false" association="_fP23IC3zEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fQTjEC3zEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fQS8AC3zEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_fQTjES3zEeCrM9IFaPNX9A" name="database" type="_KnsAoC3wEeCrM9IFaPNX9A" isUnique="false" association="_fP23IC3zEeCrM9IFaPNX9A">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fQZCoC3zEeCrM9IFaPNX9A" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fQZpsC3zEeCrM9IFaPNX9A" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_CD-6oENvEeCIf7lKBwGUQg" name="UI"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_HUSWoENvEeCIf7lKBwGUQg" name="Processing"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_JZH8MENvEeCIf7lKBwGUQg" name="Acquisition"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_UPclgENvEeCIf7lKBwGUQg" name="Storage"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_V73rEENvEeCIf7lKBwGUQg" name="FuelConsumptionAdvisor">
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_hsQv8ENvEeCIf7lKBwGUQg" name="Class_0"/>
+    <ownedOperation xmi:id="_hU5_4ENvEeCIf7lKBwGUQg" name="Operation_0"/>
+  </packagedElement>
+  <profileApplication xmi:id="_FsGP0iO9EeCZn-T-AIrSPQ">
+    <eAnnotations xmi:id="_FsGP0yO9EeCZn-T-AIrSPQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/schemas/Standard/1#/"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Model>

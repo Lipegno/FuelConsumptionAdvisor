@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <TableLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/driver_addition"
+ 	style="@style/popupMainTableLayout">
+  	
+  	<!-- The top bar -->
+	<LinearLayout
+		style="@style/popupTopBar"
+  		android:id="@+id/driver_addition_top_bar">
+  		<ImageView 
+  			style="@style/popupTopBarImage"
+  			android:src="@android:drawable/ic_menu_add" />
+		<TextView 
+			style="@style/popupTopBarText"
+			android:text="DRIVER ADDITION"/>  	
+  	</LinearLayout>
+  	
+  	<!-- The input fields -->
+  	<TableRow>
+  		<TextView 
+  			style="@style/popupMainTableTextView"
+  			android:text="First Name"/>
+  		<EditText 
+  			android:id="@+id/driver_addition_first_name" 
+  			style="@style/popupMainTableEditTextNormal"/>
+  	</TableRow>
+  	<TableRow>
+  		<TextView 
+  			style="@style/popupMainTableTextView"
+  			android:text="Last Name"/>
+  		<EditText
+  			android:id="@+id/driver_addition_last_name"
+  			style="@style/popupMainTableEditTextNormal"/>
+  	</TableRow>
+  	
+  	<!-- The bottom bar -->
+  	<RelativeLayout
+  		style="@style/popupBottomBarLayout">
+  		<Button 
+  			android:id="@+id/driver_addition_cancel_button"
+  			style="@style/popupBottomBarButton"
+  			android:text="Cancel" />
+  		<Button 
+  			android:id="@+id/driver_addition_confirm_button"
+  			style="@style/popupBottomBarButton"
+  			android:layout_alignParentRight="true"
+  			android:text="Confirm" />
+  	</RelativeLayout>
+  	
+  </TableLayout>

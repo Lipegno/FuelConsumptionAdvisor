@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Define some text related measurements -->
+
+<resources>
+	<dimen name="textHuge">
+		64px
+	</dimen>
+	<dimen name="textBig">
+		32px
+	</dimen>
+	<dimen name="textMedium">
+		24px
+	</dimen>
+	<dimen name="textSmall">
+		14px
+	</dimen>
+</resources>

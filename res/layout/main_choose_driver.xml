@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+ 	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/main_choose_driver"
+	style="@style/popupMainTableLayout">
+	
+	<!-- The top bar -->
+	<LinearLayout
+  		style="@style/popupTopBar">
+		<ImageView
+  			style="@style/popupTopBarImage"
+  			android:src="@android:drawable/ic_input_get">
+  		</ImageView>
+  		<TextView
+  			style="@style/popupTopBarText"
+	  		android:text="ENTER DRIVER CODE">
+	  	</TextView>
+	</LinearLayout>
+	
+	<!-- The input fields -->
+	<TableRow>
+		<TextView
+			style="@style/popupMainTableTextView"
+			android:layout_marginLeft="30px"
+			android:text="Code" />
+		<EditText
+			android:id="@+id/main_choose_driver_code"
+			style="@style/popupMainTableEditTextNumeric" />
+	</TableRow>
+	
+	<!-- The bottom bar -->
+	<RelativeLayout
+		style="@style/popupBottomBarLayout">
+		<Button
+			style="@style/popupBottomBarButton"
+			android:id="@+id/main_choose_driver_cancel_button"
+			android:text="Cancel">
+		</Button>
+		<Button
+			style="@style/popupBottomBarButton"
+			android:id="@+id/main_choose_driver_confirm_button"
+			android:layout_alignParentRight="true"
+			android:text="Confirm">
+		</Button>
+	</RelativeLayout>
+ 		
+</TableLayout>

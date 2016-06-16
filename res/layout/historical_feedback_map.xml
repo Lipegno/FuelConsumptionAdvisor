@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:id="@+id/map_layout_main" android:background="@drawable/gradient_effect">
+	
+	<!-- Title -->
+	<TextView android:id="@+id/map_title"
+		android:layout_marginBottom="4px" android:gravity="center_horizontal"
+		android:textColor="@color/white" android:text="Trip Map" android:textSize="12pt"
+		android:layout_centerHorizontal="true" android:layout_width="fill_parent"
+		android:layout_height="wrap_content"></TextView>
+	<TextView android:id="@+id/map_info" android:layout_below="@id/map_title"
+		android:layout_marginBottom="12px" android:gravity="center_horizontal"
+		android:textColor="@color/white" android:text="Touch on a section to see more information"
+		android:layout_centerHorizontal="true" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:textSize="6pt"></TextView>
+	<!-- Layout for the map  -->
+	<com.fuel.advisor.ui.custom.LinearLayoutBorder
+		android:id="@+id/gl_group" android:layout_width="fill_parent"
+		android:layout_below="@id/map_info" android:layout_height="wrap_content"
+		android:orientation="vertical">
+		<AbsoluteLayout android:layout_width="fill_parent" 
+						android:layout_height="fill_parent"
+						android:layout_margin="10px" >
+		<!-- GlSView that holds the map android:layout_gravity="center" -->
+		<android.opengl.GLSurfaceView android:id="@+id/historical_map_gl_view"
+			android:layout_width="460px" android:layout_height="460px" />
+		<ImageView android:src="@drawable/arrow_left"
+				   android:layout_x="0px"
+				   android:layout_y="220px"
+				   android:layout_height="wrap_content"
+				   android:layout_width="wrap_content"></ImageView>
+				   
+		<ImageView android:src="@drawable/arrow_up"
+				   android:layout_x="230px"
+				   android:layout_y="0px"
+				   android:layout_height="wrap_content"
+				   android:layout_width="wrap_content"></ImageView>
+		
+		<ImageView android:src="@drawable/arrow_right"
+				   android:layout_x="445px"
+				   android:layout_y="220px"
+				   android:layout_height="wrap_content"
+				   android:layout_width="wrap_content"></ImageView>
+		
+		<ImageView android:src="@drawable/arrow_down"
+				   android:layout_x="230px"
+				   android:layout_y="445px"
+				   android:layout_height="wrap_content"
+				   android:layout_width="wrap_content"></ImageView>
+		<ZoomControls android:id="@+id/zoomControlsMap" android:layout_width="wrap_content" 
+	 				  android:layout_below="@id/gl_group"  android:layout_height="wrap_content"
+	 				  android:layout_x="220px" android:layout_y="390px"
+				      >
+		 </ZoomControls>
+		</AbsoluteLayout>
+	</com.fuel.advisor.ui.custom.LinearLayoutBorder>
+	
+	<!-- 	Layout that holds the driving behaviour legend -->
+	<LinearLayout android:id="@+id/driving_behaviour_legend" android:layout_width="wrap_content" android:layout_below="@id/gl_group" 
+		android:layout_height="wrap_content" android:layout_marginTop="10px" android:orientation="horizontal" android:layout_centerHorizontal="true">
+		<TextView android:layout_height="fill_parent" android:gravity="center_vertical"
+			android:layout_width="wrap_content" android:text="good driving" android:textColor="@color/white"></TextView>
+		<ImageView android:src="@drawable/spectrum" android:layout_marginLeft="15px" android:layout_marginRight="15px" android:layout_width="90px"
+			android:layout_height="30px"></ImageView>
+		<TextView android:layout_height="fill_parent" android:gravity="center_vertical"
+			android:layout_width="wrap_content" android:text="bad driving" android:textColor="@color/white"></TextView>
+	</LinearLayout>
+<!-- 	Layout that holds the section legend -->
+	<LinearLayout android:id="@+id/section_legends" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+	android:layout_below="@id/driving_behaviour_legend" android:layout_marginTop="10px" 
+	android:orientation="horizontal" android:layout_centerHorizontal="true">
+		<ImageView android:src="@drawable/dummy_block"  android:layout_width="wrap_content" android:layout_height="match_parent"></ImageView>
+		<TextView android:text="  Stops  " android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+	</LinearLayout>
+
+	<!-- Layout that holds the zoom buttons -->
+	<LinearLayout android:id="@+id/map_btns_group" android:layout_below="@id/section_legends" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:layout_marginTop="10px"
+		android:layout_centerHorizontal="true"
+		android:orientation="horizontal"
+		android:gravity="bottom">
+<!-- 		<Button android:drawableLeft="@drawable/zoom_minus_icon" -->
+<!-- 			android:id="@+id/zoom_minus"  -->
+<!-- 			android:layout_width="wrap_content" android:layout_height="wrap_content" -->
+<!-- 			android:onClick="handleZoomClick"></Button> -->
+<!-- 		<Button android:drawableLeft="@drawable/zoom_plus_icon" -->
+<!-- 			android:id="@+id/zoom_plus"  -->
+<!-- 			android:layout_height="wrap_content" android:layout_width="wrap_content" -->
+<!-- 			android:onClick="handleZoomClick"></Button> -->
+		<Button android:drawableRight="@drawable/semaforo"
+			android:id="@+id/go_to_start" android:text="Start "
+			android:layout_marginLeft="20px"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:onClick="handleStartEndClick"></Button>
+		<Button android:drawableRight="@drawable/checkered_flag"
+			android:id="@+id/go_to_end" android:text="End "
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:onClick="handleStartEndClick"></Button>
+	</LinearLayout>
+
+</RelativeLayout>

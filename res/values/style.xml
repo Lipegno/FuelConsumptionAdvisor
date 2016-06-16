@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<!-- The following defines the center view used in several interfaces -->
+	<style name="centerViewLayout">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">380px</item>
+		<item name="android:layout_centerInParent">true</item>
+		<item name="android:background">@drawable/gradient_effect</item>
+	</style>
+	
+	<!-- The following style components define the menu buttons -->
+	<!-- Style to use for the LinearLayout that forms the button -->
+	<style name="buttonLayout">
+		<item name="android:layout_width">125px</item>
+		<item name="android:layout_height">125px</item>
+		<item name="android:orientation">vertical</item>
+	</style>
+	
+	<!-- Style for the image contained within the LinearLayout -->
+	<style name="buttonImage">
+		<item name="android:padding">5px</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+	</style>
+	
+	<!-- This style is used to define the TextView that describes the icon -->
+	<style name="buttonText">
+		<item name="android:layout_marginTop">5px</item>
+		<item name="android:gravity">center</item>
+		<item name="android:layout_width">125px</item>
+		<item name="android:layout_height">wrap_content</item>
+	</style>
+	
+	
+	<!-- This set of style items defines the properties for defining
+	the bottom bar that holds between 1 and 3 buttons. It sits on the bottom
+	of the main Layout, which must be a RelativeLayout -->
+	
+	<!-- This defines the style for the layout used to implement a bottom screen
+	bar that holds buttons -->
+	<style name="bottomBarLayout">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:orientation">vertical</item>
+		<item name="android:layout_alignParentBottom">true</item>
+	</style>
+	
+	<!-- Defines the inner layout style for the bottom bar (RelativeLayout) -->
+	<style name="bottomBarInnerLayout">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:paddingTop">8px</item>
+		<item name="android:paddingBottom">2px</item>
+		<item name="android:background">@color/gray</item>
+	</style>
+	
+	<!-- This defines the bottom separator that sits atop of the actual bar -->
+	<style name="bottomBarSeperator">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">2dip</item>
+		<item name="android:background">@color/dark_gray</item>
+	</style>
+	
+	<!-- Defines the button style -->
+	<style name="bottomBarButton">
+		<item name="android:layout_width">200px</item>
+		<item name="android:layout_height">wrap_content</item>
+	</style>
+	
+	
+	<!-- This defines the layout settings to be used by a popupwindow. We
+	use this kind of setting for user interaction in vehicle and driver management -->
+	<!-- The top bar that holds the information about the popup window -->
+	<style name="popupTopBar">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">70px</item>
+		<item name="android:layout_marginBottom">10px</item>
+		<item name="android:background">@drawable/popup_title</item>
+		<item name="android:orientation">horizontal</item>
+	</style>
+	<style name="popupTopBarImage">
+		<item name="android:layout_width">65px</item>
+		<item name="android:layout_height">65px</item>
+	</style>
+	<style name="popupTopBarText">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">fill_parent</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:gravity">center</item>
+	</style>
+	
+	<!-- Sets the style for the TableLayout and TableRow elements which hold
+	 the widgets to gather input from the user -->
+	<style name="popupMainTableLayout">
+		<item name="android:layout_width">440px</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:background">@color/white</item>
+	</style>
+	<style name="popupMainTableTextView">
+		<item name="android:layout_gravity">center</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginLeft">20px</item>
+		<item name="android:textSize">@dimen/textMedium</item>
+	</style>
+	<style name="popupMainTableAutoCompleteText">
+		<item name="android:layout_width">250px</item>
+		<item name="android:layout_height">65px</item>
+		<item name="android:layout_marginLeft">30px</item>
+		<item name="android:gravity">center</item>
+		<item name="android:maxLines">1</item>
+		<item name="android:inputType">text</item>
+	</style>
+	<style name="popupMainTableEditTextNumeric">
+		<item name="android:layout_width">250px</item>
+		<item name="android:layout_height">65px</item>
+		<item name="android:layout_marginLeft">30px</item>
+		<item name="android:gravity">center</item>
+		<item name="android:maxLines">1</item>
+		<item name="android:inputType">number</item>
+	</style>
+	<style name="popupMainTableEditTextNormal">
+		<item name="android:layout_width">250px</item>
+		<item name="android:layout_height">65px</item>
+		<item name="android:layout_marginLeft">30px</item>
+		<item name="android:gravity">center</item>
+		<item name="android:maxLines">1</item>
+		<item name="android:inputType">text</item>
+	</style>
+	
+	<!-- The bottom layout that holds the buttons for cancelation and confirmation of
+	the operation -->
+	<style name="popupBottomBarLayout">
+		<item name="android:paddingTop">8px</item>
+		<item name="android:background">@color/gray</item>
+		<item name="android:layout_height">80px</item>
+	</style>
+	<style name="popupBottomBarButton">
+		<item name="android:layout_width">200px</item>
+		<item name="android:layout_height">wrap_content</item>
+	</style>
+	
+	
+	<!-- This define styles for using with our vehicle calibration interface -->
+	<style name="calibrationInfoNormalText">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">25px</item>
+		<item name="android:layout_gravity">center</item>
+	</style>
+	<style name="calibrationInfoAuxiliaryText">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">15px</item>
+		<item name="android:layout_gravity">center</item>
+	</style>
+	<style name="calibrationInfoBigGreen">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:textSize">40px</item>
+		<item name="android:textColor">@color/dark_green</item>
+	</style>
+	
+<!--	This define the styles for using with the pop screen to the historical data-->
+<!-- The following defines the center view used in several interfaces -->
+	<style name="historicalCenterViewLayout">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">600px</item>
+		<item name="android:layout_centerInParent">true</item>
+		<item name="android:background">@drawable/gradient_effect</item>
+	</style>
+	<style name="historicalTitle">
+		<item	name="android:textSize">60px</item>
+		<item name="android:textStyle">bold</item>
+ 		<item name="android:layout_width">wrap_content</item>
+ 		<item name="android:layout_gravity">center_horizontal</item>
+ 		<item name ="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+	<style name="historicalSubTitle">
+		<item	name="android:textSize">40px</item>
+		<item name="android:textStyle">bold</item>
+ 		<item name="android:layout_width">wrap_content</item>
+ 		<item name="android:layout_gravity">center_horizontal</item>
+ 		<item name ="android:layout_height">wrap_content</item>
+	</style>
+	<style name="fuelConsText">
+		<item	name="android:textSize">120px</item>
+ 		<item name="android:layout_width">wrap_content</item>
+ 		<item name="android:layout_gravity">center_horizontal</item>
+ 		<item name ="android:layout_height">wrap_content</item>
+ 		<item name="android:textStyle">bold</item>
+ 		<item name ="android:textColor">#000000</item>
+	</style>
+	<style name="VSP_bars">
+ 		<item name="android:layout_marginLeft">10px</item>
+	</style>
+	
+</resources>

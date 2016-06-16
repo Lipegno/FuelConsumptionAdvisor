@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/main_choose_settings"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+	<!-- The center view -->
+	<RelativeLayout
+		android:id="@+id/main_choose_center_view"
+		style="@style/centerViewLayout">
+ 		
+ 		<!-- The driver icon -->
+ 		<LinearLayout
+ 			style="@style/buttonLayout"
+ 			android:id="@+id/main_choose_driver_button"
+ 			android:layout_marginLeft="10px"
+ 			android:layout_marginTop="20px"
+ 			android:layout_alignParentLeft="true">
+ 			<ImageView
+ 				style="@style/buttonImage"
+ 				android:src="@drawable/guy_icon">
+ 			</ImageView>
+ 			<TextView
+ 				style="@style/buttonText"
+ 				android:text="Choose Driver">
+ 			</TextView>
+ 		</LinearLayout>
+ 		
+ 		<!-- The info about the driver -->
+ 		<TableLayout
+ 			android:layout_alignParentRight="true"
+ 			android:layout_width="wrap_content"
+ 			android:layout_height="wrap_content"
+ 			android:layout_marginRight="5px"
+ 			android:layout_marginTop="20px">
+ 			<TableRow
+ 				android:layout_marginTop="10px">
+ 				<TextView
+ 					android:gravity="right"
+ 					android:text="First Name: ">
+ 				</TextView>
+ 			 	<com.fuel.advisor.ui.custom.TextViewBorder
+ 			 		android:id="@+id/main_choose_first_name"
+ 			 		android:gravity="center"
+ 					android:layout_width="200px"
+ 					android:layout_height="wrap_content"
+ 					android:text="---" />
+ 			</TableRow>
+ 			<TableRow
+ 				android:layout_marginTop="10px">
+ 				<TextView
+ 					android:gravity="right"
+ 					android:text="Last Name: ">
+ 				</TextView>
+ 				<com.fuel.advisor.ui.custom.TextViewBorder
+ 					android:id="@+id/main_choose_last_name"
+ 					android:gravity="center"
+ 					android:layout_height="wrap_content"
+ 					android:text="---" />
+ 			</TableRow>
+ 			<TableRow
+ 				android:layout_marginTop="10px">
+ 				<TextView
+ 					android:gravity="right"
+ 					android:text="ID: ">
+ 				</TextView>
+ 				<com.fuel.advisor.ui.custom.TextViewBorder
+ 					android:id="@+id/main_choose_user_id"
+ 					android:gravity="center"
+ 					android:text="---" />
+ 			</TableRow>
+ 		</TableLayout>
+ 		
+ 		<!-- The vehicle icon -->
+ 		<LinearLayout
+ 			style="@style/buttonLayout"
+ 			android:id="@+id/main_choose_vehicle_button"
+ 			android:layout_alignParentBottom="true"
+ 			android:layout_alignParentLeft="true"
+ 			android:layout_marginBottom="25px"
+ 			android:layout_marginLeft="10px">
+ 			<ImageView
+ 				style="@style/buttonImage"
+ 				android:src="@drawable/vehicle_icon">
+ 			</ImageView>
+ 			<TextView
+ 				style="@style/buttonText"
+ 				android:text="Choose Vehicle">
+ 			</TextView>
+ 		</LinearLayout>
+ 		
+ 		<!-- The info about the vehicle -->
+ 		<TableLayout
+ 			android:layout_alignParentRight="true"
+ 			android:layout_alignParentBottom="true"
+ 			android:layout_width="wrap_content"
+ 			android:layout_height="wrap_content"
+ 			android:layout_marginRight="5px"
+ 			android:layout_marginBottom="20px">
+ 			<TableRow
+ 				android:layout_marginBottom="10px">
+ 				<TextView
+ 					android:gravity="right"
+ 					android:text="Brand: ">
+ 				</TextView>
+ 			 	<com.fuel.advisor.ui.custom.TextViewBorder
+ 			 		android:id="@+id/main_choose_vehicle_brand"
+ 			 		android:gravity="center"
+ 					android:layout_width="200px"
+ 					android:layout_height="wrap_content"
+ 					android:text="---" />
+ 			</TableRow>
+ 			<TableRow
+ 				android:layout_marginBottom="10px">
+ 				<TextView
+ 					android:gravity="right"
+ 					android:text="Model: ">
+ 				</TextView>
+ 				<com.fuel.advisor.ui.custom.TextViewBorder
+ 					android:id="@+id/main_choose_vehicle_model"
+ 					android:gravity="center"
+ 					android:layout_height="wrap_content"
+ 					android:text="---" />
+ 			</TableRow>
+ 			<TableRow
+ 				android:layout_marginBottom="10px">
+ 				<TextView
+ 					android:gravity="right"
+ 					android:text="Year: ">
+ 				</TextView>
+ 				<com.fuel.advisor.ui.custom.TextViewBorder
+ 					android:gravity="center"
+ 					android:id="@+id/main_choose_vehicle_year"
+ 					android:text="---" />
+ 			</TableRow>
+ 			<TableRow>
+ 				<TextView
+ 					android:gravity="right"
+ 					android:text="Plate: ">
+ 				</TextView>
+ 				<com.fuel.advisor.ui.custom.TextViewBorder
+ 					android:gravity="center"
+ 					android:id="@+id/main_choose_vehicle_plate"
+ 					android:text="---" />
+ 			</TableRow>
+ 		</TableLayout>
+ 		
+ 		<!-- Separator -->
+ 		<View
+ 			android:layout_width="fill_parent"
+ 			android:layout_height="1px"
+ 			android:background="@color/gray"
+ 			android:layout_centerInParent="true">
+ 		</View>
+	</RelativeLayout>
+	
+	 <!-- Title of menu -->
+	<TextView
+		android:layout_width="wrap_content"
+ 		android:layout_height="wrap_content"
+ 		android:layout_above="@id/main_choose_center_view"
+ 		android:layout_centerHorizontal="true"
+ 		android:layout_marginBottom="5px"
+ 		android:text="APPLICATION SETUP">
+ 	</TextView>
+	
+	<!-- Show the bottom bar -->
+	<LinearLayout
+		style="@style/bottomBarLayout">
+		<View 
+			style="@style/bottomBarSeperator"/>
+		<RelativeLayout
+			style="@style/bottomBarInnerLayout">
+			<Button
+				style="@style/bottomBarButton"
+				android:layout_alignParentLeft="true"
+				android:id="@+id/main_choose_settings_start_normal_button"
+				android:onClick="handleButtonClick"
+				android:text="Start Normal"
+				android:drawableLeft="@drawable/ok_bt_icon"
+				android:enabled="false">
+			</Button>
+			<Button
+				style="@style/bottomBarButton"
+				android:layout_toRightOf="@id/main_choose_settings_start_normal_button"
+				android:id="@+id/main_choose_settings_start_viz_button"
+				android:onClick="handleButtonClick"
+				android:text="Start Viz"
+				android:drawableRight="@drawable/ok_bt_icon"
+				android:enabled="false">
+			</Button>
+			<Button
+				style="@style/bottomBarButton"
+				android:layout_toRightOf="@id/main_choose_settings_start_viz_button"
+				android:id="@+id/main_choose_settings_start_historical_data"
+				android:onClick="handleButtonClick"
+				android:text="Start Agg"
+				android:drawableRight="@drawable/ok_bt_icon"
+				android:enabled="false">
+			</Button>
+		</RelativeLayout>
+	</LinearLayout>
+	
+</RelativeLayout>

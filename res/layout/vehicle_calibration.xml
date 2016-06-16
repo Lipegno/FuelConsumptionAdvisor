@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	
+	<!-- The Center View -->
+	<RelativeLayout
+		android:id="@+id/vehicle_calibration_center_view"
+		style="@style/centerViewLayout">
+		
+		<!-- The vehicle icon -->
+		<LinearLayout
+			style="@style/buttonLayout"
+			android:id="@+id/vehicle_calibration_choose_vehicle_button"
+			android:layout_marginLeft="10px"
+			android:layout_marginTop="20px"
+			android:layout_centerVertical="true">
+			<ImageView 
+				style="@style/buttonImage"
+				android:src="@drawable/vehicle_icon"/>
+			<TextView 
+				style="@style/buttonText"
+				android:text="Choose Vehicle" />
+		</LinearLayout>
+		
+		<!-- The info about the vehicle -->
+ 		<TableLayout
+ 			android:layout_alignParentTop="true"
+ 			android:layout_alignParentRight="true"
+ 			android:layout_marginTop="30px"
+ 			android:layout_width="wrap_content"
+ 			android:layout_height="wrap_content"
+ 			android:layout_marginRight="20px">
+ 			<TextView 
+ 				android:gravity="center"
+ 				android:text="Vehicle Info" 
+ 				android:paddingBottom="10px"/>
+ 			<TableRow
+ 				android:layout_marginBottom="10px">
+ 				<TextView
+ 					android:gravity="right"
+ 					android:text="Brand: ">
+ 				</TextView>
+ 			 	<com.fuel.advisor.ui.custom.TextViewBorder
+ 			 		android:id="@+id/vehicle_calibration_vehicle_brand"
+ 			 		android:gravity="center"
+ 					android:layout_width="200px"
+ 					android:layout_height="wrap_content"
+ 					android:text="---" />
+ 			</TableRow>
+ 			<TableRow
+ 				android:layout_marginBottom="10px">
+ 				<TextView
+ 					android:gravity="right"
+ 					android:text="Model: ">
+ 				</TextView>
+ 				<com.fuel.advisor.ui.custom.TextViewBorder
+ 					android:id="@+id/vehicle_calibration_vehicle_model"
+ 					android:gravity="center"
+ 					android:layout_height="wrap_content"
+ 					android:text="---" />
+ 			</TableRow>
+ 			<TableRow
+ 				android:layout_marginBottom="10px">
+ 				<TextView
+ 					android:gravity="right"
+ 					android:text="Year: ">
+ 				</TextView>
+ 				<com.fuel.advisor.ui.custom.TextViewBorder
+ 					android:gravity="center"
+ 					android:id="@+id/vehicle_calibration_vehicle_year"
+ 					android:text="---" />
+ 			</TableRow>
+ 			<TableRow>
+ 				<TextView
+ 					android:gravity="right"
+ 					android:text="Plate: ">
+ 				</TextView>
+ 				<com.fuel.advisor.ui.custom.TextViewBorder
+ 					android:gravity="center"
+ 					android:id="@+id/vehicle_calibration_vehicle_plate"
+ 					android:text="---" />
+ 			</TableRow>
+ 		</TableLayout>
+ 		
+ 		<!-- The info about the calibration process -->
+ 		<TableLayout
+ 			android:layout_alignParentBottom="true"
+ 			android:layout_alignParentRight="true"
+ 			android:layout_marginBottom="30px"
+ 			android:layout_width="wrap_content"
+ 			android:layout_height="wrap_content"
+ 			android:layout_marginRight="20px">
+ 			<TextView 
+ 				android:gravity="center"
+ 				android:text="Calibration Info"
+ 				android:paddingBottom="10px" />
+ 			<TableRow
+ 				android:layout_marginBottom="10px">
+ 				<TextView
+ 					android:gravity="right"
+ 					android:text="Status: ">
+ 				</TextView>
+ 			 	<com.fuel.advisor.ui.custom.TextViewBorder
+ 			 		android:id="@+id/vehicle_calibration_status"
+ 			 		android:gravity="center"
+ 					android:layout_width="200px"
+ 					android:layout_height="wrap_content"
+ 					android:text="---" />
+ 			</TableRow>
+ 			<TableRow
+ 				android:layout_marginBottom="10px">
+ 				<TextView
+ 					android:gravity="right"
+ 					android:text="Date: ">
+ 				</TextView>
+ 				<com.fuel.advisor.ui.custom.TextViewBorder
+ 					android:id="@+id/vehicle_calibration_date"
+ 					android:gravity="center"
+ 					android:layout_height="wrap_content"
+ 					android:text="---" />
+ 			</TableRow>
+ 		</TableLayout>
+ 		
+	</RelativeLayout>
+	
+	<!-- Title of menu -->
+	<TextView
+		android:layout_width="wrap_content"
+	 	android:layout_height="wrap_content"
+	 	android:layout_centerHorizontal="true"
+	 	android:layout_above="@id/vehicle_calibration_center_view"
+		android:layout_marginBottom="5px"
+		android:text="VEHICLE CALIBRATION">
+	</TextView>
+	
+	<!-- Show the bottom bar -->
+	<LinearLayout
+		style="@style/bottomBarLayout">
+		<View 
+			style="@style/bottomBarSeperator"/>
+		<RelativeLayout
+			style="@style/bottomBarInnerLayout">
+			<Button
+				style="@style/bottomBarButton"
+				android:layout_centerHorizontal="true"
+				android:id="@+id/vehicle_calibration_start"
+				android:onClick="handleButtonClick"
+				android:text="Start"
+				android:drawableLeft="@drawable/target" 
+				android:enabled="false"/>
+		</RelativeLayout>
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/main"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+  
+ 	<RelativeLayout
+ 		style="@style/centerViewLayout"
+ 		android:id="@+id/main_center_view">
+ 		<!-- The first icon -->
+	 	<LinearLayout
+	 		style="@style/buttonLayout"
+	 		android:id="@+id/main_vehicle_button"
+	 		android:layout_marginLeft="10px"
+	 		android:layout_marginTop="20px">
+		  	<ImageView
+		  		style="@style/buttonImage"
+		  		android:src="@drawable/vehicle_icon">
+		  	</ImageView>
+		  	<TextView
+		  		style="@style/buttonText"
+		  		android:id="@+id/main_first_icon_text"
+		  		android:text="Vehicle Management">
+		  	</TextView>
+	  	</LinearLayout>
+  	
+  		<!-- The second icon -->
+  		<LinearLayout
+  			style="@style/buttonLayout"
+  			android:id="@+id/main_driver_button"
+  			android:layout_marginTop="20px"
+  			android:layout_centerHorizontal="true">
+  			<ImageView
+  				style="@style/buttonImage"
+  				android:src="@drawable/guy_icon">
+  			</ImageView>
+  			<TextView
+  				style="@style/buttonText"
+  				android:text="Driver Management">
+  			</TextView>
+  		</LinearLayout>
+  		
+  		<!-- The third icon -->
+  		<LinearLayout
+  			style="@style/buttonLayout"
+  			android:id="@+id/main_calibrate_button"
+  			android:layout_marginRight="10px"
+  			android:layout_marginTop="20px"
+  			android:layout_alignParentRight="true">
+  			<ImageView
+  				style="@style/buttonImage"
+  				android:src="@drawable/android_icon">
+  			</ImageView>
+  			<TextView
+  				style="@style/buttonText"
+  				android:text="Calibrate Device">
+  			</TextView>
+  		</LinearLayout>
+  		
+  		<!-- The fourth icon -->
+  		<LinearLayout
+  			style="@style/buttonLayout"
+  			android:id="@+id/main_start_button"
+  			android:layout_alignParentBottom="true"
+  			android:layout_marginBottom="20px"
+  			android:layout_marginRight="5px"
+  			android:layout_alignParentRight="true">
+  			<ImageView
+  				style="@style/buttonImage"
+  				android:src="@drawable/speedometer_icon">
+  			</ImageView>
+  			<TextView
+  				style="@style/buttonText"
+  				android:text="Start Application">
+  			</TextView>
+  		</LinearLayout>
+  		
+  		<!-- Temporary icon -->
+  		<LinearLayout
+  			style="@style/buttonLayout"
+  			android:id="@+id/main_calibrate_orientation"
+  			android:layout_alignParentBottom="true"
+  			android:layout_alignParentLeft="true"
+  			android:layout_marginBottom="20px"
+  			android:layout_marginLeft="5px">
+  			<ImageView 
+  				style="@style/buttonImage"
+  				android:src="@drawable/android_phone_icon" />
+  			<TextView 
+  				style="@style/buttonText"
+  				android:text="Calibrate Orientation"/>
+  		</LinearLayout>
+  		
+  </RelativeLayout>
+  
+  <!-- The information about the application -->
+ 	<TextView
+ 		android:paddingTop="5px"
+  		android:gravity="center"
+  		android:layout_alignParentTop="true"
+  		android:layout_centerHorizontal="true"
+  		android:text="@string/app_top_info"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content">
+  	</TextView>
+  	<TextView
+  		android:layout_alignParentBottom="true"
+  		android:layout_centerHorizontal="true"
+  		android:paddingTop="10px"
+  		android:textStyle="bold"
+  		android:textSize="@dimen/textSmall"
+  		android:gravity="center"
+  		android:layout_gravity="center"
+  		android:layout_width="180px"
+  		android:layout_height="wrap_content"
+  		android:text="@string/app_bottom_info">
+  	</TextView>
+	<TextView
+		android:paddingBottom="10px"
+		android:layout_above="@id/main_center_view"
+		android:layout_centerHorizontal="true"
+		android:text="MENU"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+	</TextView>
+  
+</RelativeLayout>

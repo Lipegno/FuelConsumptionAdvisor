@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/vehicle_management"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+  
+	<RelativeLayout
+		style="@style/centerViewLayout"
+		android:id="@+id/vehicle_management_center_view">
+		
+		<!-- Add vehicle icon -->		
+		<LinearLayout
+			style="@style/buttonLayout"
+			android:id="@+id/vehicle_management_add"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginLeft="5px"
+			android:layout_marginTop="20px">
+			<ImageView
+				style="@style/buttonImage"
+				android:src="@drawable/add_icon">
+			</ImageView>
+			<TextView
+				style="@style/buttonText"
+				android:text="Add Vehicle">
+			</TextView>
+		</LinearLayout>
+		
+		<!-- Remove vehicle icon -->
+		<LinearLayout
+			style="@style/buttonLayout"
+			android:id="@+id/vehicle_management_remove"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginLeft="5px"
+			android:layout_marginTop="20px">
+			<ImageView
+				style="@style/buttonImage"
+				android:src="@drawable/minus_icon">
+			</ImageView>
+			<TextView
+				style="@style/buttonText"
+				android:text="Remove Vehicle">
+			</TextView>
+		</LinearLayout>
+		
+		<!-- List vehicles icon -->
+		<LinearLayout
+			style="@style/buttonLayout"
+			android:id="@+id/vehicle_management_list"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginRight="5px"
+			android:layout_marginTop="20px">
+			<ImageView
+				style="@style/buttonImage"
+				android:src="@drawable/list_icon">
+			</ImageView>
+			<TextView
+				style="@style/buttonText"
+				android:text="List Vehicles">
+			</TextView>
+		</LinearLayout>
+		
+		<!-- Model calibration icon -->
+		<LinearLayout
+			style="@style/buttonLayout"
+			android:id="@+id/vehicle_management_vsp"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+			android:layout_marginBottom="20px">
+			<ImageView
+				style="@style/buttonImage"
+				android:src="@drawable/vsp_icon">
+			</ImageView>
+			<TextView
+				style="@style/buttonText"
+				android:text="Calibrate Model">
+			</TextView>
+		</LinearLayout>
+		
+	</RelativeLayout>
+  
+  	<!-- UI information -->
+  	<TextView
+  		android:layout_marginBottom="5px"
+  		android:layout_above="@id/vehicle_management_center_view"
+  		android:layout_centerHorizontal="true"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:text="VEHICLE MANAGEMENT">
+  	</TextView>
+</RelativeLayout>

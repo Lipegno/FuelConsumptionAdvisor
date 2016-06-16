@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/main_choose_vehicle"
+	style="@style/popupMainTableLayout">
+	
+	<!-- The top bar -->
+	<LinearLayout
+		style="@style/popupTopBar">
+		<ImageView 
+			style="@style/popupTopBarImage"
+			android:src="@android:drawable/ic_input_get"/>
+		<TextView 
+			style="@style/popupTopBarText"
+			android:text="ENTER VEHICLE PLATE"/>		
+	</LinearLayout>
+	
+	<!-- The input fields -->
+	<TableRow>
+		<TextView 
+			style="@style/popupMainTableTextView"
+			android:text="Plate" />
+		<AutoCompleteTextView 
+			style="@style/popupMainTableAutoCompleteText"
+			android:id="@+id/main_choose_vehicle_choose_plate"/>
+	</TableRow>
+	
+	<!-- The bottom bar -->
+	<RelativeLayout
+		style="@style/popupBottomBarLayout">
+		<Button
+			android:id="@+id/main_choose_vehicle_cancel_button"
+			style="@style/popupBottomBarButton"
+			android:text="Cancel" />
+		<Button 
+			android:id="@+id/main_choose_vehicle_confirm_button"
+			style="@style/popupBottomBarButton"
+			android:layout_alignParentRight="true"
+			android:text="Confirm"/>
+	</RelativeLayout>
+
+</TableLayout>

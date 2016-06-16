@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:id="@+id/phone_calibrate_layout">
+		
+	<!-- Shows the Acceleration Values for the X, Y and Z -->
+	<TableLayout
+		android:layout_width="250px"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true">
+		<!-- The X value information -->
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:text="Acc X: "/>
+			<TextView
+				android:id="@+id/phone_calib_acc_x"
+				android:layout_alignParentRight="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/textHuge"
+				android:text="0.00"/>
+		</RelativeLayout>
+		
+		<!-- The Y value information -->
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:text="Acc Y: "/>
+			<TextView
+				android:id="@+id/phone_calib_acc_y"
+				android:layout_alignParentRight="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/textHuge"
+				android:text="0.00"/>
+		</RelativeLayout>
+		
+		<!-- The Z value information -->
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:text="Acc Z: "/>
+			<TextView
+				android:id="@+id/phone_calib_acc_z"
+				android:layout_alignParentRight="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/textHuge"
+				android:text="0.00"/>
+		</RelativeLayout>
+	</TableLayout>
+	
+	<!-- Show the bottom bar -->
+	<LinearLayout
+		style="@style/bottomBarLayout">
+		<View 
+			style="@style/bottomBarSeperator" />
+		<RelativeLayout
+			style="@style/bottomBarInnerLayout">
+			<Button 
+				style="@style/bottomBarButton"
+				android:layout_alignParentRight="true"
+				android:id="@+id/start_calib_phone_button"
+				android:text="Start"
+				android:drawableRight="@drawable/target"
+				android:onClick="handleButtonClick"/>
+			<Button 
+				style="@style/bottomBarButton"
+				android:layout_alignParentLeft="true"
+				android:id="@+id/cancel_calib_phone_button"
+				android:text="Cancel"
+				android:drawableLeft="@drawable/not_ok_icon"
+				android:onClick="handleButtonClick"
+				android:enabled="false"/>
+		</RelativeLayout>
+	</LinearLayout>
+	
+	<!-- The progress bar -->
+	<ProgressBar
+		android:id="@+id/phone_calib_progress"
+		style="?android:attr/progressBarStyleHorizontal"
+		android:max="@string/driver_calib_time"
+		android:layout_width="250px"
+		android:layout_height="50px"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="120px"/>
+	<TextView 
+		android:textSize="@dimen/textMedium"
+		android:layout_centerHorizontal="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="80px"
+		android:text="Progress"/>
+
+</RelativeLayout>

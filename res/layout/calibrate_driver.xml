@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		
+	<!-- Shows the Acceleration Values for the X, Y and Z -->
+	<TableLayout
+		android:layout_width="350px"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true">
+		<!-- The X value information -->
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView 
+				android:id="@+id/driver_calib_pitch_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:text="Current Pitch: "/>
+			<TextView
+				android:id="@+id/driver_calib_pitch"
+				android:layout_alignParentRight="true"
+				android:layout_marginRight="20px"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/textHuge"
+				android:text="00.00" />
+			<TextView
+				android:layout_alignParentRight="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/textSmall"
+				android:text="º" />
+		</RelativeLayout>
+		
+		<!-- The Y value information -->
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView
+				android:id="@+id/driver_calib_roll_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:text="Current Roll: "/>
+			<TextView
+				android:id="@+id/driver_calib_roll"
+				android:layout_alignParentRight="true"
+				android:layout_marginRight="20px"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/textHuge"
+				android:text="00.00" />
+			<TextView 
+				android:layout_alignParentRight="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/textSmall"
+				android:text="º" />
+		</RelativeLayout>
+	</TableLayout>
+	
+	<!-- Show the bottom bar -->
+	<LinearLayout
+		style="@style/bottomBarLayout">
+		<View 
+			style="@style/bottomBarSeperator" />
+		<RelativeLayout
+			style="@style/bottomBarInnerLayout">
+			<Button 
+				style="@style/bottomBarButton"
+				android:layout_alignParentRight="true"
+				android:id="@+id/start_calib_driver_button"
+				android:text="Start"
+				android:drawableRight="@drawable/target"
+				android:onClick="handleButtonClick"/>
+			<Button 
+				style="@style/bottomBarButton"
+				android:layout_alignParentLeft="true"
+				android:id="@+id/cancel_calib_driver_button"
+				android:text="Cancel"
+				android:drawableLeft="@drawable/not_ok_icon"
+				android:onClick="handleButtonClick"
+				android:enabled="false"/>
+		</RelativeLayout>
+	</LinearLayout>
+	
+	<!-- The progress bar -->
+	<ProgressBar
+		android:id="@+id/driver_calib_progress"
+		style="?android:attr/progressBarStyleHorizontal"
+		android:max="@string/driver_calib_time"
+		android:layout_width="250px"
+		android:layout_height="50px"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="120px"/>
+	<TextView 
+		android:textSize="@dimen/textMedium"
+		android:layout_centerHorizontal="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="80px"
+		android:text="Progress"/>
+
+</RelativeLayout>

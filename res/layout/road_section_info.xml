@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  style="@style/popupMainTableLayout" 
+  android:id="@+id/road_section_info">
+  
+  <!-- The top bar -->
+  <LinearLayout
+  	style="@style/popupTopBar">
+  	<ImageView 
+  		style="@style/popupTopBarImage"
+  		android:src="@drawable/fuel_cons_icon"/>
+  	<TextView 
+  		style="@style/popupTopBarText"
+  		android:id="@+id/section_info_title"
+  		/>
+  </LinearLayout>
+  <TableRow android:layout_marginTop="5px">
+  	<TextView 
+  		style="@style/popupMainTableTextView"
+  		android:text="Total Consumption: "
+  		android:textSize="8pt"
+  		android:textColor="@color/black"/>
+  	<TextView 
+  		style="@style/popupMainTableTextView"
+  		android:id="@+id/section_info_consump"
+  		android:textSize="8pt"
+  		android:textColor="@color/black"/>
+  </TableRow>
+  <TableRow android:layout_marginTop="5px">
+  	<TextView 
+  		style="@style/popupMainTableTextView"
+  		android:textSize="8pt"
+  		android:text="vs last trip : "
+  		android:textColor="@color/black"/>
+  	<TextView 
+  		style="@style/popupMainTableTextView"
+  		android:textSize="8pt"
+  		android:text=" + 8%"
+  		android:textColor="@color/black"/>
+  </TableRow>
+  <TableRow android:layout_marginTop="5px">
+  	<TextView 
+  		style="@style/popupMainTableTextView"
+  		android:textSize="8pt"
+  		android:text="Average for this trip : "
+  		android:textColor="@color/black"/>
+  	<TextView 
+  		style="@style/popupMainTableTextView"
+  		android:textSize="8pt"
+  		android:id="@+id/section_info_average"
+  		android:textColor="@color/black"/>
+  </TableRow>
+  <!-- The bottom bar -->
+  <RelativeLayout
+  	style="@style/popupBottomBarLayout">
+  	<Button 
+  		android:id="@+id/section_info_ok_btn"
+  		style="@style/popupBottomBarButton"
+		android:layout_centerInParent="true"
+  		android:text="Ok"/>
+  </RelativeLayout>
+  
+</TableLayout>

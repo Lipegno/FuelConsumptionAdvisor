@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/driver_management"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+	<RelativeLayout
+		style="@style/centerViewLayout"
+		android:id="@+id/driver_management_center_view">
+		
+		<!-- Add driver icon -->
+		<LinearLayout
+			style="@style/buttonLayout"
+			android:id="@+id/driver_management_add"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginLeft="5px"
+			android:layout_marginTop="20px">
+			<ImageView
+				style="@style/buttonImage"
+				android:src="@drawable/add_icon">
+			</ImageView>
+			<TextView
+				style="@style/buttonText"
+				android:text="Add Driver">
+			</TextView>
+		</LinearLayout>
+
+		<!-- Remove driver icon -->
+		<LinearLayout
+			style="@style/buttonLayout"
+			android:id="@+id/driver_management_remove"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginLeft="5px"
+			android:layout_marginTop="20px">
+			<ImageView
+				style="@style/buttonImage"
+				android:src="@drawable/minus_icon">
+			</ImageView>
+			<TextView
+				style="@style/buttonText"
+				android:text="Remove Driver">
+			</TextView>
+		</LinearLayout>
+		
+		<!-- List drivers icon -->
+		<LinearLayout
+			android:id="@+id/driver_management_list"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:padding="5px"
+			android:layout_marginLeft="5px"
+			android:layout_marginTop="20px"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<ImageView
+				android:layout_gravity="center"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/list_icon">
+			</ImageView>
+			<TextView
+				android:gravity="center"
+				android:layout_width="100px"
+				android:layout_height="wrap_content"
+				android:text="List Drivers">
+			</TextView>
+		</LinearLayout>
+	</RelativeLayout>
+	
+	<!-- UI info -->
+	<TextView
+		android:layout_marginBottom="5px"
+		android:layout_centerHorizontal="true"
+		android:layout_above="@id/driver_management_center_view"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="DRIVER MANAGEMENT">
+	</TextView>
+	
+</RelativeLayout>

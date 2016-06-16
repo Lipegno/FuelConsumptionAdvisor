@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="Application Preferences">
+	
+	<!-- Sets up general preferences -->
+	<PreferenceCategory
+		android:title="General Preferences">
+		<CheckBoxPreference 
+			android:defaultValue="true" 
+			android:key="trip_logging"
+			android:enabled="true"
+			android:summary="Toggles Trip Logging" 
+			android:title="Trip Logging" />
+		<CheckBoxPreference 
+			android:defaultValue="false"
+			android:key="sound_enabled"
+			android:enabled="true"
+			android:summary="Toggles Sound Feedback"
+			android:title="Sound Feedback" />
+	</PreferenceCategory>
+	
+	<!-- Sensor related preferences -->
+	<PreferenceCategory
+		android:title="Sensors Preferences">
+		<ListPreference
+			android:title="Accelerometer Sensitivity"
+			android:summary="Changes sensitivity"
+			android:key="acc_sensitivity"
+			android:defaultValue="0.1"
+			android:enabled="true"
+			android:entries="@array/acc_sensitivity_options"
+			android:entryValues="@array/acc_sensitivity_values" />
+		<ListPreference
+			android:title="Accelerometer Sampling"
+			android:summary="Changes sampling frequency"
+			android:key="acc_sampling"
+			android:defaultValue="5"
+			android:enabled="true"
+			android:entries="@array/acc_sampling_options"
+			android:entryValues="@array/acc_sampling_values" />
+		<ListPreference
+			android:title="GPS Sampling"
+			android:summary="Chnages Sampling Frequency"
+			android:key="gps_sampling"
+			android:defaultValue="1"
+			android:enabled="true"
+			android:entries="@array/gps_sampling_options"
+			android:entryValues="@array/gps_sampling_values" />
+	</PreferenceCategory>
+</PreferenceScreen>

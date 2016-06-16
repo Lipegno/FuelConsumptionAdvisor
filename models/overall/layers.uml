@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_q8V0MENvEeCIf7lKBwGUQg" name="layers">
+  <packageImport xmi:id="_q8WbQENvEeCIf7lKBwGUQg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_tfd4QENvEeCIf7lKBwGUQg" name="UI">
+    <packagedElement xmi:type="uml:Package" xmi:id="_NnfIIENxEeCIf7lKBwGUQg" name="UI.Main">
+      <packagedElement xmi:type="uml:Class" xmi:id="_OLmXQENwEeCIf7lKBwGUQg" name="MainOptions">
+        <ownedOperation xmi:id="_Cn_7wENxEeCIf7lKBwGUQg" name="onCreate"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_1tBIgENvEeCIf7lKBwGUQg" name="MainClickHandler">
+        <ownedOperation xmi:id="_0KyEQENwEeCIf7lKBwGUQg" name="startCalibration"/>
+        <ownedOperation xmi:id="_3hbP8ENwEeCIf7lKBwGUQg" name="startDriverManagement"/>
+        <ownedOperation xmi:id="_5R5IAENwEeCIf7lKBwGUQg" name="startMain"/>
+        <ownedOperation xmi:id="_6ypJEENwEeCIf7lKBwGUQg" name="startOrientationCalibration"/>
+        <ownedOperation xmi:id="_8ZfyIENwEeCIf7lKBwGUQg" name="startVehicleManagement"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_uYnGwENvEeCIf7lKBwGUQg" name="FuelConsumptionAdvisor" clientDependency="_vM8RQENwEeCIf7lKBwGUQg _v-xW0ENwEeCIf7lKBwGUQg"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_vM8RQENwEeCIf7lKBwGUQg" name="FromFuelConsumptionAdvisortoMainClickHandler" supplier="_1tBIgENvEeCIf7lKBwGUQg" client="_uYnGwENvEeCIf7lKBwGUQg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_v-xW0ENwEeCIf7lKBwGUQg" name="FromFuelConsumptionAdvisortoMainOptions" supplier="_OLmXQENwEeCIf7lKBwGUQg" client="_uYnGwENvEeCIf7lKBwGUQg"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_lAP-UENxEeCIf7lKBwGUQg" name="Storage">
+    <ownedComment xmi:id="_G6qUcEQZEeCOM8OC8h1YSQ" annotatedElement="_oHAT4ENxEeCIf7lKBwGUQg">
+      <body>Facade</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:Class" xmi:id="_oHAT4ENxEeCIf7lKBwGUQg" name="DBManager">
+      <ownedOperation xmi:id="_WTUV8EQYEeCOM8OC8h1YSQ" name="DBManager" visibility="private" isStatic="true"/>
+      <ownedOperation xmi:id="_q6nxIEQYEeCOM8OC8h1YSQ" name="getDBManager" isStatic="true"/>
+      <ownedOperation xmi:id="_tBrkQEQYEeCOM8OC8h1YSQ" name="close"/>
+      <ownedOperation xmi:id="_vyOZQEQYEeCOM8OC8h1YSQ" name="getVehicleBrands"/>
+      <ownedOperation xmi:id="_6Rz9kEQYEeCOM8OC8h1YSQ" name="insertVehicleBrand"/>
+      <ownedOperation xmi:id="_-rVikEQYEeCOM8OC8h1YSQ" name="...."/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_dBzxwEQZEeCOM8OC8h1YSQ" name="TripDataStorage">
+      <ownedAttribute xmi:id="_gCG6AEQZEeCOM8OC8h1YSQ" name="db_man" visibility="private" type="_oHAT4ENxEeCIf7lKBwGUQg" isUnique="false"/>
+      <ownedAttribute xmi:id="_FNYd0EQaEeCOM8OC8h1YSQ" name="dBManager" type="_oHAT4ENxEeCIf7lKBwGUQg" isUnique="false" association="_FNFi4EQaEeCOM8OC8h1YSQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FNd9YEQaEeCOM8OC8h1YSQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FNdWUEQaEeCOM8OC8h1YSQ"/>
+      </ownedAttribute>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_-lY2IEQZEeCOM8OC8h1YSQ" name="TripBroadcastReceiver" visibility="private"/>
+      <ownedOperation xmi:id="_tD-04EQZEeCOM8OC8h1YSQ" name="onCreate" visibility="protected"/>
+      <ownedOperation xmi:id="_v0J2cEQZEeCOM8OC8h1YSQ" name="onBind" visibility="protected"/>
+      <ownedOperation xmi:id="_yArYYEQZEeCOM8OC8h1YSQ" name="onDestroy" visibility="protected"/>
+      <ownedOperation xmi:id="_0oERYEQZEeCOM8OC8h1YSQ" name="run" visibility="protected"/>
+      <ownedOperation xmi:id="_2uub4EQZEeCOM8OC8h1YSQ" name="updateBuffer" visibility="private"/>
+      <ownedOperation xmi:id="_5nzh0EQZEeCOM8OC8h1YSQ" name="flushBuffer" visibility="private"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_FNFi4EQaEeCOM8OC8h1YSQ" name="A_TripDataStorage_DBManager" visibility="protected" memberEnd="_FNYd0EQaEeCOM8OC8h1YSQ _FNfLgEQaEeCOM8OC8h1YSQ">
+      <ownedEnd xmi:id="_FNfLgEQaEeCOM8OC8h1YSQ" name="tripDataStorage" type="_dBzxwEQZEeCOM8OC8h1YSQ" isUnique="false" association="_FNFi4EQaEeCOM8OC8h1YSQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FNiO0EQaEeCOM8OC8h1YSQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FNi14EQaEeCOM8OC8h1YSQ"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_nZ_iAEQjEeCOM8OC8h1YSQ" name="Processing">
+    <packagedElement xmi:type="uml:Class" xmi:id="_sE-DYEQjEeCOM8OC8h1YSQ" name="SensorDataProcessor">
+      <ownedAttribute xmi:id="_ZRBU0EQmEeCOM8OC8h1YSQ" name="pipeFilter" type="_Fb2zIEQkEeCOM8OC8h1YSQ" isUnique="false" association="_ZQ_foEQmEeCOM8OC8h1YSQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZRG0YUQmEeCOM8OC8h1YSQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZRG0YEQmEeCOM8OC8h1YSQ"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_xLfRQEQjEeCOM8OC8h1YSQ" name="onCreate" visibility="public"/>
+      <ownedOperation xmi:id="_ynvM0EQjEeCOM8OC8h1YSQ" name="onDestroy" visibility="public"/>
+      <ownedOperation xmi:id="_z8PhoEQjEeCOM8OC8h1YSQ" name="onBind" visibility="public"/>
+      <ownedOperation xmi:id="_2q0AsEQjEeCOM8OC8h1YSQ" name="update"/>
+      <ownedOperation xmi:id="_8WzTIEQjEeCOM8OC8h1YSQ" name="run"/>
+      <ownedOperation xmi:id="_9qqHsEQjEeCOM8OC8h1YSQ" name="getHandler"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_DCgWIEQkEeCOM8OC8h1YSQ" name="Processing.Filter">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Fb2zIEQkEeCOM8OC8h1YSQ" name="PipeFilter" isAbstract="true">
+        <ownedAttribute xmi:id="_I0814EQkEeCOM8OC8h1YSQ" name="inPis" isUnique="false"/>
+        <ownedAttribute xmi:id="_JwtTgEQkEeCOM8OC8h1YSQ" name="outPos" isUnique="false"/>
+        <ownedOperation xmi:id="_TOmKQEQkEeCOM8OC8h1YSQ" name="PipeFilter"/>
+        <ownedOperation xmi:id="_L-BDIEQlEeCOM8OC8h1YSQ" name="start"/>
+        <ownedOperation xmi:id="_MqzQoEQlEeCOM8OC8h1YSQ" name="stop"/>
+        <ownedOperation xmi:id="_fwr8YEQlEeCOM8OC8h1YSQ" name="run"/>
+        <ownedOperation xmi:id="_DuY50EQmEeCOM8OC8h1YSQ" name="getOutputStream"/>
+        <ownedOperation xmi:id="_EyEkYEQmEeCOM8OC8h1YSQ" name="getInputStream"/>
+        <ownedOperation xmi:id="_FtlKYEQmEeCOM8OC8h1YSQ" name="connectIntputStream"/>
+        <ownedOperation xmi:id="_HjEFUEQmEeCOM8OC8h1YSQ" name="connectOutputStream"/>
+        <ownedOperation xmi:id="_LCNswEQmEeCOM8OC8h1YSQ" name="onDataReceived" visibility="protected" isAbstract="true"/>
+        <ownedOperation xmi:id="_Oxn9wEQmEeCOM8OC8h1YSQ" name="setFilterName" visibility="protected"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_ZQ_foEQmEeCOM8OC8h1YSQ" name="A_SensorDataProcessor_PipeFilter" memberEnd="_ZRBU0EQmEeCOM8OC8h1YSQ _ZRHbcEQmEeCOM8OC8h1YSQ">
+        <ownedEnd xmi:id="_ZRHbcEQmEeCOM8OC8h1YSQ" name="sensorDataProcessor" type="_sE-DYEQjEeCOM8OC8h1YSQ" isUnique="false" association="_ZQ_foEQmEeCOM8OC8h1YSQ">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZRLF0EQmEeCOM8OC8h1YSQ" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZRLF0UQmEeCOM8OC8h1YSQ"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_yB3_UEQmEeCOM8OC8h1YSQ" name="Acquisition">
+    <packagedElement xmi:type="uml:Class" xmi:id="_19e5QEQmEeCOM8OC8h1YSQ" name="AccelerometerServiceListener">
+      <ownedAttribute xmi:id="_AXQJcEQnEeCOM8OC8h1YSQ" name="acc : double[]" visibility="public" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JJAS8EQnEeCOM8OC8h1YSQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JI_r4EQnEeCOM8OC8h1YSQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_JJBhEEQnEeCOM8OC8h1YSQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_W-4doEQnEeCOM8OC8h1YSQ" name="Operation_0"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_37cawEQmEeCOM8OC8h1YSQ" name="LocationServiceListener"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_6JV1sEQmEeCOM8OC8h1YSQ" name="MagnetometerServiceListener"/>
+</uml:Model>

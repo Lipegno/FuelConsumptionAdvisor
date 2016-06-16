@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent">
+	<LinearLayout style="@style/historicalCenterViewLayout"
+		android:orientation="vertical" android:id="@+id/historical_layout_center">
+
+		<TextView android:text="TRIP SO FAR" style="@style/historicalTitle" android:layout_weight="1"></TextView>
+
+		<TextView android:text="Average Fuel Consumption:" style="@style/historicalSubTitle" android:layout_weight="1" android:textSize="10pt"></TextView>
+
+		<LinearLayout android:background="@drawable/fuel_cons_back_gradient"
+			android:orientation="horizontal" android:layout_gravity="center_horizontal"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_margin="10px" android:layout_weight="1">
+			<LinearLayout android:layout_width="wrap_content"
+				android:orientation="horizontal" android:layout_margin="20px"
+				android:layout_height="wrap_content">
+
+				<TextView style="@style/fuelConsText" android:text="30"></TextView>
+
+				<TextView android:text="lt/100km" android:textColor="#000000"
+					android:layout_gravity="center_vertical" android:layout_width="wrap_content"
+					android:layout_height="wrap_content"></TextView>
+			</LinearLayout>
+		</LinearLayout>
+
+		<TextView android:text="Driving behaviour (average):" android:textSize="10pt" style="@style/historicalSubTitle" android:layout_weight="1"></TextView>
+		<LinearLayout  android:layout_width="wrap_content" android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_weight="1">
+			<ImageView style="@style/VSP_bars" android:layout_width="wrap_content" android:id="@+id/imageBar1"  android:layout_height="wrap_content"></ImageView>
+			<ImageView style="@style/VSP_bars" android:layout_width="wrap_content" android:id="@+id/imageBar2" android:layout_height="wrap_content"></ImageView>
+			<ImageView style="@style/VSP_bars" android:layout_width="wrap_content" android:id="@+id/imageBar3" android:layout_height="wrap_content"></ImageView>
+			<ImageView style="@style/VSP_bars" android:layout_width="wrap_content" android:id="@+id/imageBar4" android:layout_height="wrap_content"></ImageView>
+			<ImageView style="@style/VSP_bars" android:layout_width="wrap_content" android:id="@+id/imageBar5" android:layout_height="wrap_content"></ImageView>
+			<ImageView style="@style/VSP_bars" android:layout_width="wrap_content" android:id="@+id/imageBar6" android:layout_height="wrap_content"></ImageView>
+			<ImageView style="@style/VSP_bars" android:layout_width="wrap_content" android:id="@+id/imageBar7" android:layout_height="wrap_content"></ImageView>
+			<ImageView style="@style/VSP_bars" android:layout_width="wrap_content" android:id="@+id/imageBar8" android:layout_height="wrap_content"></ImageView>
+			<ImageView style="@style/VSP_bars" android:layout_width="wrap_content" android:id="@+id/imageBar9" android:layout_height="wrap_content"></ImageView>
+			<ImageView style="@style/VSP_bars" android:layout_width="wrap_content" android:id="@+id/imageBar10" android:layout_height="wrap_content"></ImageView>
+			<ImageView style="@style/VSP_bars" android:layout_width="wrap_content" android:id="@+id/imageBar11" android:layout_height="wrap_content"></ImageView>
+			<ImageView style="@style/VSP_bars" android:layout_width="wrap_content" android:id="@+id/imageBar12" android:layout_height="wrap_content"></ImageView>
+			<ImageView style="@style/VSP_bars" android:layout_width="wrap_content" android:id="@+id/imageBar13" android:layout_height="wrap_content"></ImageView>
+			<ImageView style="@style/VSP_bars" android:layout_width="wrap_content" android:id="@+id/imageBar14" android:layout_height="wrap_content"></ImageView>
+			<ImageView style="@style/VSP_bars" android:layout_width="wrap_content" android:id="@+id/imageBar15" android:layout_height="wrap_content"></ImageView>
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

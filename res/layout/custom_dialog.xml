@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:id="@+id/custom_dialog"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:padding="10px">
+  
+	<!-- Image to show on the notification -->
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<ImageView
+	  		android:id="@+id/custom_dialog_image"
+		  	android:layout_width="wrap_content"
+		  	android:layout_height="wrap_content"
+	  		android:layout_marginLeft="10px"
+	  		android:src="@drawable/error">
+	  	</ImageView>
+	  
+		<!-- Text to show on the notification -->
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_marginLeft="25px" 
+			android:textColor="#FFF" 
+			android:layout_height="wrap_content" 
+			android:id="@+id/custom_dialog_text" 
+			android:text="Custom error dialog">
+		</TextView>
+	</LinearLayout>
+
+	<!-- Layout that holds the buttons -->
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="50px"
+		android:orientation="horizontal"
+		android:gravity="center">
+		<Button
+			android:id="@+id/custom_dialog_cancel_button"
+			android:layout_width="200px"
+			android:layout_height="60px"
+			android:text="Cancel" />
+		<Button
+			android:id="@+id/custom_dialog_ok_button"
+			android:layout_width="200px"
+			android:layout_height="60px"
+			android:text="OK"
+			android:layout_gravity="center"/>
+	</LinearLayout>
+</LinearLayout>

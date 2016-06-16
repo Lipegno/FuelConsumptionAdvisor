@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout defines the used schema for each of the rows on the main options -->
+<LinearLayout
+	android:id="@+id/main_options"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	
+	<!-- The icon set on the left side of the row -->
+	<ImageView
+		android:id="@+id/opt_row_icon"
+		android:layout_gravity="left"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+	</ImageView>
+	
+	<!-- The text that describes the option -->
+	<TextView
+		android:id="@+id/opt_row_desc"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+	</TextView>
+	
+	<!-- The text that shows the current value of the option aligned to the left -->
+	<TextView
+		android:layout_gravity="right"
+		android:id="@+id/opt_row_status"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="@dimen/textSmall">
+	</TextView>
+	
+</LinearLayout>

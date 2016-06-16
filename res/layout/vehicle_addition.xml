@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+  	xmlns:android="http://schemas.android.com/apk/res/android"
+ 	android:id="@+id/vehicle_addition"
+ 	style="@style/popupMainTableLayout">
+  	
+	<!-- The information about the popup window -->
+	<LinearLayout
+  		style="@style/popupTopBar">
+  	<ImageView
+  		style="@style/popupTopBarImage"
+  		android:src="@android:drawable/ic_menu_add">
+  	</ImageView>
+  	<TextView
+  		style="@style/popupTopBarText"
+	  	android:text="VEHICLE ADDITION">
+	  </TextView>
+	</LinearLayout>
+  	
+  	<!-- The information to collect from the driver -->
+  	<TableRow>
+		<TextView
+			style="@style/popupMainTableTextView"
+			android:text="Brand" />
+		<EditText
+			android:id="@+id/vehicle_addition_brand"
+			style="@style/popupMainTableEditTextNormal" />
+  	</TableRow>
+  	<TableRow>
+  		<TextView
+  			style="@style/popupMainTableTextView"
+  			android:text="Model" />
+  		<AutoCompleteTextView
+  			android:id="@+id/vehicle_addition_model"
+  			style="@style/popupMainTableAutoCompleteText" />
+  	</TableRow>
+  	<TableRow>
+		<TextView
+			style="@style/popupMainTableTextView"
+	  		android:text="Year" />
+  		<LinearLayout
+  			android:layout_marginLeft="30px"
+  			android:orientation="horizontal">
+  			<Button
+  				android:id="@+id/vehicle_addition_date_button_minus"
+  				android:layout_width="55px"
+  				android:layout_height="55px"
+  				android:longClickable="true"
+  				android:background="@drawable/btn_minus" />
+	  	<EditText
+	  		android:id="@+id/vehicle_addition_date"
+	  		android:layout_width="150px"
+	  		android:layout_height="65px"
+	  		android:gravity="center"
+	  		android:inputType="number"
+	  		android:text="2000" />
+	  	<Button
+	  		android:id="@+id/vehicle_addition_date_button_plus"
+	  		android:longClickable="true"
+	  		android:layout_width="55px"
+  			android:layout_height="55px"
+	  		android:background="@drawable/btn_plus" />
+  		</LinearLayout>
+  	</TableRow>
+  	<TableRow>
+  		<TextView
+  			style="@style/popupMainTableTextView"
+  			android:text="Type" />
+  		<RadioGroup
+  			android:layout_marginLeft="30px"
+  			android:layout_width="wrap_content"
+  			android:layout_height="wrap_content"
+  			android:orientation="horizontal">
+  			<RadioButton
+  				android:id="@+id/vehicle_addition_type_light"
+  				android:layout_width="wrap_content"
+  				android:layout_height="wrap_content"
+  				android:checked="true"
+  				android:textColor="@color/gray"
+  				android:text="Light" />
+  			<RadioButton
+  				android:layout_marginLeft="10px"
+  				android:id="@+id/vehicle_addition_type_heavy"
+  				android:layout_width="wrap_content"
+  				android:layout_height="wrap_content"
+  				android:textColor="@color/gray"
+  				android:text="Heavy" />
+  		</RadioGroup>
+  	</TableRow>
+  	<TableRow>
+  		<TextView
+  			style="@style/popupMainTableTextView"
+  			android:text="Air Coef." />
+  		<EditText
+  			android:id="@+id/vehicle_addition_air_coef"
+  			style="@style/popupMainTableEditTextNumeric"
+  			android:inputType="numberDecimal" />
+	</TableRow>
+	<TableRow>
+  		<TextView
+  			style="@style/popupMainTableTextView"
+  			android:text="Roll Coef." />
+  		<EditText
+  			android:id="@+id/vehicle_addition_roll_coef"
+  			style="@style/popupMainTableEditTextNumeric"
+  			android:inputType="numberDecimal" />
+  	</TableRow>
+  	<TableRow>
+  		<TextView
+  			style="@style/popupMainTableTextView"
+  			android:text="Plate" />
+  		<AutoCompleteTextView
+  			android:id="@+id/vehicle_addition_plate_number"
+  			style="@style/popupMainTableAutoCompleteText" />
+  	</TableRow>
+  	
+  	<!-- The botoom bar layout -->
+  	<RelativeLayout
+  		style="@style/popupBottomBarLayout">
+  		<Button
+  			style="@style/popupBottomBarButton"
+  			android:id="@+id/vehicle_addition_cancel_button"
+  			android:text="Cancel" />
+  		<Button
+  			style="@style/popupBottomBarButton"
+  			android:id="@+id/vehicle_addition_confirm_button"
+  			android:layout_alignParentRight="true"
+  			android:text="Confirm" />
+  	</RelativeLayout>
+  	
+</TableLayout>

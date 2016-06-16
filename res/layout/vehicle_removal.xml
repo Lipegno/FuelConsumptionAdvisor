@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+  	style="@style/popupMainTableLayout"
+ 	android:id="@+id/vehicle_removal">
+  	
+	<!-- The top bar -->
+	<LinearLayout
+		style="@style/popupTopBar">
+		<ImageView
+	  		style="@style/popupTopBarImage"
+	  		android:src="@android:drawable/ic_menu_delete" />
+	  	<TextView
+	  		style="@style/popupTopBarText"
+		  	android:text="VEHICLE REMOVAL" />
+	  </LinearLayout>
+  	
+  	<!-- The input fields -->
+  	<TableRow>
+		<TextView
+			style="@style/popupMainTableTextView"
+			android:text="Plate" />
+		<AutoCompleteTextView
+			android:id="@+id/vehicle_removal_plate"
+			style="@style/popupMainTableAutoCompleteText" />
+  	</TableRow>
+  	
+  	<!-- The bottom bar -->
+  	<RelativeLayout
+  		style="@style/popupBottomBarLayout">
+		<Button
+  			style="@style/popupBottomBarButton"
+  			android:id="@+id/vehicle_removal_cancel_button"
+  			android:text="Cancel" />
+  		<Button
+  			style="@style/popupBottomBarButton"
+  			android:id="@+id/vehicle_removal_confirm_button"
+  			android:layout_alignParentRight="true"
+  			android:text="Confirm" />
+  	</RelativeLayout>
+  	
+</TableLayout>

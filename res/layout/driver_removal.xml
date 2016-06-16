@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  style="@style/popupMainTableLayout" 
+  android:id="@+id/driver_removal">
+  
+  <!-- The top bar -->
+  <LinearLayout
+  	style="@style/popupTopBar">
+  	<ImageView 
+  		style="@style/popupTopBarImage"
+  		android:src="@android:drawable/ic_menu_delete"/>
+  	<TextView 
+  		style="@style/popupTopBarText"
+  		android:text="DRIVER REMOVAL"/>
+  </LinearLayout>
+  
+  <!-- The fields that gather user input -->
+  <TableRow>
+  	<TextView 
+  		style="@style/popupMainTableTextView"
+  		android:text="Passcode"/>
+  	<EditText 
+  		style="@style/popupMainTableEditTextNumeric"
+  		android:id="@+id/driver_removal_code"/>
+  </TableRow>
+  
+  <!-- The bottom bar -->
+  <RelativeLayout
+  	style="@style/popupBottomBarLayout">
+  	<Button 
+  		android:id="@+id/driver_removal_cancel_button"
+  		style="@style/popupBottomBarButton"
+  		android:text="Cancel"/>
+  	<Button 
+  		android:id="@+id/driver_removal_confirm_button"
+  		style="@style/popupBottomBarButton"
+  		android:layout_alignParentRight="true"
+  		android:text="Confirm"/>
+  </RelativeLayout>
+  
+</TableLayout>

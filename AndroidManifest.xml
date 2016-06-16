@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.fuel.advisor"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="9" />
+    
+    <!-- Define the necessary permissions -->
+    <uses-permission 
+    	android:name="android.permission.ACCESS_FINE_LOCATION">
+    </uses-permission>
+    <uses-permission
+    	android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+    </uses-permission>
+    
+    <application 
+    	android:persistent="false" 
+    	android:debuggable="true" 
+    	android:icon="@drawable/app_icon" 
+    	android:label="@string/app_name">
+        
+        <!-- Define the activities -->
+        <activity
+        	android:configChanges="keyboardHidden|orientation"
+        	android:name=".ui.main.FuelConsumptionAdvisor"
+        	android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+        	android:label="@string/calibrate" 
+        	android:screenOrientation="portrait" 
+        	android:name=".ui.calibrate.CalibrationMain">
+        	<intent-filter>
+        		<action android:name="com.fuel.adivsor.calibrate.CALIBRATE"/>
+        		<category android:name="android.intent.category.DEFAULT"/>
+        	</intent-filter>
+        </activity>
+		
+		<activity
+			android:label="@string/info"
+			android:configChanges="keyboardHidden|orientation" 
+			android:name=".ui.vehicle_info.VehicleInfoFeedback"
+			android:screenOrientation="portrait">
+		</activity>
+		
+		<activity
+			android:configChanges="keyboardHidden|orientation"
+			android:screenOrientation="portrait"
+			android:name=".ui.calibrate.CalibrationPhone">
+		</activity>
+		
+		<activity
+			android:configChanges="keyboardHidden|orientation"
+			android:screenOrientation="portrait"
+			android:name=".ui.calibrate.CalibrationDriver">
+		</activity>
+		
+		<activity
+			android:configChanges="keyboardHidden|orientation"
+			android:screenOrientation="portrait" 
+			android:name=".ui.main.choose.MainChooseSettings">
+		</activity>
+		
+		<activity
+			android:configChanges="keyboardHidden|orientation"
+			android:screenOrientation="portrait"
+			android:name=".ui.vehicle_management.VehicleManagement">
+		</activity>
+		
+		<activity
+			android:configChanges="keyboardHidden|orientation"
+			android:screenOrientation="portrait"
+			android:name=".ui.vehicle_management.BrandSelection">
+		</activity>
+		
+		<activity
+			android:configChanges="keyboardHidden|orientation"
+			android:screenOrientation="portrait"
+			android:name=".ui.vehicle_management.VehicleListing">
+		</activity>
+		
+		<activity
+			android:configChanges="keyboardHidden|orientation"
+			android:screenOrientation="portrait" 
+			android:name=".ui.driver_management.DriverManagement">
+		</activity>
+		
+		<activity
+			android:configChanges="keyboardHidden|orientation"
+			android:screenOrientation="portrait"
+			android:name=".ui.driver_management.DriverListing">
+		</activity>
+		
+		<activity
+			android:label="Preferences"
+			android:configChanges="keyboardHidden|orientation"
+			android:screenOrientation="portrait"
+			android:name=".ui.main.MainOptions">
+		</activity>
+		
+		<activity 
+			android:name=".ui.vehicle_info.VisualFeedback" 
+			android:screenOrientation="portrait">
+		</activity>
+		
+		<activity 
+			android:name=".ui.vehicle_info.VisualFeedback" 
+			android:screenOrientation="portrait">
+		</activity>
+		<activity 
+			android:name=".ui.vehicle_info.VisualFeedbackAggregate" 
+			android:theme="@android:style/Theme.NoTitleBar" 
+			android:screenOrientation="portrait">
+		</activity>
+		<activity android:name=".ui.vehicle_info.VisuaFeedbackMap"
+				  android:screenOrientation="portrait"></activity>
+				  
+		<activity android:name=".ui.vehicle_info.HistoricalFeedback"
+				  android:screenOrientation="portrait"></activity>
+		
+		<activity android:name=".ui.vehicle_info.HistoricalFeedbackMap"
+				  android:screenOrientation="portrait"></activity>
+		
+		<!-- Define the services -->
+		<service
+			android:name="com.android.aware_framework.Accelerometer_Service">
+		</service>
+		
+		<service
+			android:name="com.android.aware_framework.Location_Service">
+		</service>
+		
+		<service 
+			android:name=".processing.SensorDataProcessor">
+		</service>
+		
+		<service
+			android:name=".storage.VehicleDataStorage">
+		</service>
+		
+		<service 
+			android:name="com.android.aware_framework.Magnetometer_Service">
+		</service>
+		
+		<service
+			android:name=".storage.TripDataStorage"
+			android:process=":trip_storage">
+		</service>
+</application>
+</manifest> 
